@@ -1,0 +1,65 @@
+<h2>
+    Sign up!
+</h2>
+
+<form action="/auth/signup" method="POST">
+    <div class="form-group">
+      <input id="authEmail" class="form-control" type="email" placeholder="Email" name="email">
+    </div>
+  
+    <div class="form-group">
+      <input id="authName" class="form-control" type="text" placeholder="Name" name="name">
+    </div>
+  
+    <div class="form-group">
+      <input id="authPassword" class="form-control" type="password" placeholder="Password" name="password">
+    </div>
+  
+    <input class="btn btn-primary orange" type="submit">
+  </form>
+  
+<!-- <a class="autho" href="/auth/signup">Signup</a>
+<a class="autho" href="/auth/login">Login</a>
+<a class="autho" href="/auth/logout">Logout</a> -->
+
+<div>
+ <img src='/img/goast.png' alt='BOOOO'>
+</div>
+
+<style>
+    body{
+        text-align: center;
+        background-color: black;
+    }
+    h2 {
+        color: darkorange;
+        font-size: 24px;
+        margin-top: 84px;
+        margin-bottom:32px;
+    }
+    .autho {
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 25px;
+    }
+    input {
+        border: 0px solid black;
+    }
+    div{
+     max-width: 250px;
+    }
+    .orange {
+        background: darkorange;
+        width:100%;
+        max-width: 250px;
+        border: 0px;
+        margin-top: 32px;
+    }
+    form {
+        margin-bottom: 40px;
+    }
+    img {
+        width:100%;
+        max-width: 250px;
+    }
+</style>

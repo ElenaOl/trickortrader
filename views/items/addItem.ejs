@@ -1,0 +1,51 @@
+<h3>Add your candies</h3>
+
+<form action="/item/<%=listId%>" method="POST" autocomplete="on">
+  <div class="form-group">
+    <label for="itemName">Candy</label>
+    <input type="text" class="form-control" id="itemName" name="itemName" required>
+  </div>
+  <div class="form-group">
+    <label for="amount">How Many?</label>
+    <input type="integer" class="form-control" id="amount" name="amount" autocomplete="off" required></input>
+  </div>
+  <div>
+    <label for="comment">What's Up?</label>
+    <textarea type="text" class="form-control" id="comment" name="comment" autocomplete="off"></textarea>
+  </div>
+  <input type="submit" class="btn btn-primary">
+</form>
+
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    background-size:cover;
+    }
+    h3, h4 {
+    color:#FF5C00;
+    font-family: serif;
+    }
+    label {
+      color:#FF5C00;
+    font-size: 16px;
+    font-family: sans-serif;
+
+    }
+    .navbar-brand {
+      margin-left: 10px;
+      font-weight: bold;
+      font-family: serif;
+    }
+    .form-group {
+      margin-top: 20px;
+    }
+    #itemName, #amount{
+      width: 70%;
+    }
+    .btn{
+      background:#FF5C00;
+      border: 0px;
+    }
+  </style>
