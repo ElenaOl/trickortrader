@@ -4,26 +4,25 @@
 </div>  
 
 <form action="/list" method="POST">
-    <div class="form-group ">
-      <input type="text" class="form-control " id="list" placeholder="Add new list" name="listName"required>
-    
-   
-      <input type="submit" class="btn inline btn-primary">
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <input type="text" class="form-control " id="list" placeholder="Add new list" name="listName"required>
+      </div>
+      <div class="col-sm-2">
+        <input type="submit" class="btn inline btn-primary">
+      </div>  
     </div>  
 </form>
 
 <% names.forEach(function(name) { %>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 well">
-        <table>
-          <td class="button"><a href="/list" deleteUrl="/list/<%=name.id%>" class="btn btn-danger glyphicon glyphicon-trash delete-btn"></a></td>
-          <td class='words'><p><a href="/list/<%=name.id%>"><%= name.listName %></a></p></td>
-        </table>
-      </div>
-      <!-- <div class="col-xs-9 col-sm-8 col-md-8 col-lg-8">  
-        
-      </div> -->
+    <div class="row well">
+        <div class="col-sm-1">
+          <a href="/list" deleteUrl="/list/<%=name.id%>" class="btn btn-danger glyphicon glyphicon-trash delete-btn button"></a>
+        </div>
+        <div class="col-sm-11">
+          <a href="/list/<%=name.id%>"><%= name.listName %></a>
+        </div>
     </div>
   </div>
 <% }); %>
@@ -60,55 +59,33 @@
     color: white;
     font-family: 'Permanent Marker';
   }
-  .button {
-    width:10%;
-  }
-  .words {
-    width: 60%;
-    padding-left: 5px;
-    background-color: grey;
-    margin: 0;
-  }
   .well {
     background-color: grey;
-    margin
+    margin: 0px;
   }
   
-  #list {
-      width: 70%;
+  #list, .btn-primary {
+    margin-top: 32px;
   }
   a {
     font-size: 24px;
     font-family: 'Permanent Marker';
     color: red;
   }
-  .navbar-brand {
-  margin-left: 10px;
-  font-weight: bold;
-  font-family: serif;
-  }
+  
   .title{
     background-image: url('/img/blood.jpg');
     text-align: center;
   }
   .btn{
-    vertical-align: top;
     background-color: #ff5c00;
     color: white;
     width:100%;
     max-width: 250px;
     border: 0px;
-    margin-top: 32px;
   }
   .glyphicon {
     background-color: grey;
   }
-  .form-control{
-    display: inline-block;
-  }
-  .inline {
-    display:inline-block;
-    vertical-align: top;
-  }
-
+  
 </style>
